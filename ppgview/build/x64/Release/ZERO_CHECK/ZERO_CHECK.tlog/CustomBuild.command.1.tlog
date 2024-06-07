@@ -1,0 +1,10 @@
+^D:\DEV\PROJECTS\SENSORIUM-EX\MAX_OBJECTS\PPGVIEW\BUILD\CMAKEFILES\B5E02ECD1EEBA0A149B812EF4A1E040D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Dev/Projects/sensorium-ex/max_objects/ppgview -BD:/Dev/Projects/sensorium-ex/max_objects/ppgview/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Dev/Projects/sensorium-ex/max_objects/ppgview/build/ppgview.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Dev\Projects\sensorium-ex\max_objects\ppgview_tilde\build\CMakeFiles\34b92c6b2b8627d56573e31f6f0d470c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{07925D4D-2471-3D60-8F90-B63A761CAE3F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

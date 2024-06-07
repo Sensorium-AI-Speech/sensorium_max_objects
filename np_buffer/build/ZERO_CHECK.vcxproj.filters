@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Dev\Projects\sensorium-ex\max_objects\np_buffer\build\CMakeFiles\8fbd651668bc5c275dbac560ea3b9fad\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3906CB90-4A96-3AEB-8DC9-32B621AA2884}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
