@@ -1,0 +1,3 @@
+[submodule "np.ppgplay/bfnppc"]
+	path = np.ppgplay/bfnppc
+	url = https://github.com/dependanz/bfnppc

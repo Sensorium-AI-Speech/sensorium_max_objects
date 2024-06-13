@@ -1,4 +1,9 @@
+np.ppgplay/build/**
+ppgview/build/**
+ppgview_tilde/build/**
+
 .venv/**
 .vscode/**
 *.pt
 *.ts
+
