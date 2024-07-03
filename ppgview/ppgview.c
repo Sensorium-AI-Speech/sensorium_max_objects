@@ -58,7 +58,6 @@ void ext_main(void *r)
     c->c_flags |= CLASS_FLAG_NEWDICTIONARY;
     jbox_initclass(c, JBOX_FIXWIDTH | JBOX_COLOR);
 
-    class_addmethod(c, (method)ppgview_ppg, "ppg", A_GIMME, 0);
     class_addmethod(c, (method)ppgview_paint, "paint", A_CANT, 0);
     class_addmethod(c, (method)ppgview_mousedown,    "mousedown",    A_CANT, 0);
     class_addmethod(c, (method)ppgview_mousedrag,    "mousedrag",    A_CANT, 0);
@@ -69,11 +68,9 @@ void ext_main(void *r)
     class_addmethod(c, (method)ppgview_mousewheel,   "mousewheel",   A_CANT, 0);
 
     // messages for state setting / retrieval
+    class_addmethod(c, (method)ppgview_ppg, "ppg", A_GIMME, 0);
 	class_addmethod(c, (method)ppgview_int,	  "int",	A_LONG, 0);
 	class_addmethod(c, (method)ppgview_bang,  "bang", 0);
-    
-    // Defining PPG message attributes
-    // _define_ppg_message_attrs(c);
 
     CLASS_ATTR_CHAR(c, "trackmouse", 0, t_ppgview, u_trackmouse);
 	CLASS_ATTR_STYLE_LABEL(c, "trackmouse", 0, "onoff", "Track Mouse");

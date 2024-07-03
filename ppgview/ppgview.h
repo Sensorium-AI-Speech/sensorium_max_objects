@@ -23,48 +23,6 @@ typedef struct _ppgview {
 
     int ppg_idx;                        // PPG Buffer Index
     double **ppg;                       // PPG Buffer
-    // PPG message attributes
-    // double ppg_aa;
-    // double ppg_ae;
-    // double ppg_ah;
-    // double ppg_ao;
-    // double ppg_aw;
-    // double ppg_ay;
-    // double ppg_b;
-    // double ppg_ch;
-    // double ppg_d;
-    // double ppg_dh;
-    // double ppg_eh;
-    // double ppg_er;
-    // double ppg_ey;
-    // double ppg_f;
-    // double ppg_g;
-    // double ppg_hh;
-    // double ppg_ih;
-    // double ppg_iy;
-    // double ppg_jh;
-    // double ppg_k;
-    // double ppg_l;
-    // double ppg_m;
-    // double ppg_n;
-    // double ppg_ng;
-    // double ppg_ow;
-    // double ppg_oy;
-    // double ppg_p;
-    // double ppg_r;
-    // double ppg_s;
-    // double ppg_sh;
-    // double ppg_t;
-    // double ppg_th;
-    // double ppg_uh;
-    // double ppg_uw;
-    // double ppg_v;
-    // double ppg_w;
-    // double ppg_y;
-    // double ppg_z;
-    // double ppg_zh;
-    // double ppg_silent;
-
 } t_ppgview;
 
 void ext_main(void* r);
