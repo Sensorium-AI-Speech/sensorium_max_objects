@@ -169,8 +169,8 @@ void ppgview_ppg(t_ppgview *obj, t_symbol *s, long argc, t_atom *argv) {
     long i;
     t_atom *ap;
 
-    post("message selector is %s", s->s_name);
-    post("there are %ld arguments", argc);
+    // post("message selector is %s", s->s_name);
+    // post("there are %ld arguments", argc);
 
     // increment ap each time to get to the next atom
     for (i = 0, ap = argv; i < argc; i++, ap++) {
