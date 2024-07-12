@@ -1,3 +1,0 @@
-D:/Dev/Projects/sensorium-ex/max_objects/ppgview_tilde/build/CMakeFiles/ppgview_tilde.dir
-D:/Dev/Projects/sensorium-ex/max_objects/ppgview_tilde/build/CMakeFiles/ALL_BUILD.dir
-D:/Dev/Projects/sensorium-ex/max_objects/ppgview_tilde/build/CMakeFiles/ZERO_CHECK.dir
