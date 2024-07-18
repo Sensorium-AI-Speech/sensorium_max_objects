@@ -17,9 +17,9 @@
     * Might also want to follow their instructions on loading pretrained models and create a folder called `pretrained_models`, and adding it to the Max include path (`Options/File Preferences`)
 5. Download promonet *.ts and *.pt file.
 6. Follow [promonet instructions](#promonet-instructions) to extract speech features from an audio file
-    * There are test *.wav files in `test_files/audio`
+    * There are test *.wav files in `test_files/audio` (make sure they are visible in the Max include path by editing `Options/File Preferences`)
 7. Either follow the instructions on [how to get started in MaxMSP](#maxmsp-instructions), or open `test_promoread_promo2signal_071524.maxpat` as a template patcher.
-    * There are test *.csv files in `test_files/csv`
+    * There are test *.csv files in `test_files/csv` (make sure they are visible in the Max include path by editing `Options/File Preferences`)
 
 ## ProMoNet instructions
 
