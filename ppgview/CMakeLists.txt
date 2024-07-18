@@ -20,9 +20,12 @@ if (APPLE)
     endif()
 endif()
 
-set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../Library")
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../max-sdk-base/script/max-pretarget.cmake)
+if (NOT DEFINED C74_LIBRARY_OUTPUT_DIRECTORY) {
+    set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../Library")
+}
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/../max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
 
 include_directories(
     "${MAX_SDK_INCLUDES}"
@@ -40,4 +43,4 @@ add_library(
     ${PROJECT_SRC}
 )
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../max-sdk-base/script/max-posttarget.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../max-sdk/source/max-sdk-base/script/max-posttarget.cmake)

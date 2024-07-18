@@ -1,5 +1,23 @@
 # Max/MSP Objects for Sensorium
 
+- [Max/MSP Objects for Sensorium](#maxmsp-objects-for-sensorium)
+  - [Getting Started](#getting-started)
+  - [ProMoNet instructions](#promonet-instructions)
+    - [Extracting speech features](#extracting-speech-features)
+    - [Exporting the neural vocoder](#exporting-the-neural-vocoder)
+  - [MaxMSP instructions](#maxmsp-instructions)
+    - [How to put everything together](#how-to-put-everything-together)
+
+## Getting Started
+1. Clone this repo to local
+2. Add `<path-to-repo>/patches` to Max include path (`open Max -> Options/File Preferences`)
+3. Follow directions to get IRCAM's `nn~` working for your OS: [nn_tilde](https://github.com/acids-ircam/nn_tilde).
+    * Might also want to follow their instructions on loading pretrained models and create a folder called `pretrained_models`, and adding it to the Max include path (`Options/File Preferences`)
+4. Download promonet *.ts and *.pt file.
+5. Follow [promonet instructions](#promonet-instructions) to extract speech features from an audio file
+    * There are test *.wav files in `test_files/audio`
+6. Either follow the instructions on [how to get started in MaxMSP](#maxmsp-instructions), or open `test_promoread_promo2signal_071524.maxpat` as a template patcher.
+    * There are test *.csv files in `test_files/csv`
 
 ## ProMoNet instructions
 
@@ -32,3 +50,14 @@ python -m promonet.model.export \
 ```
 
 The model checkpoint is created during `promonet` training, which is documented [here](https://github.com/maxrmorrison/promonet/tree/master?tab=readme-ov-file#training).
+
+## MaxMSP instructions
+
+### How to put everything together
+To start real-time inference of turning speech features to speech sound with the neural vocoder using IRCAM's mcs.nn~ Max object you do the following:
+
+1. Create a `[promoread]` object.
+2. Create a `[promo2signal]` object.
+3. Create a `[mcs.nn~]` object.
+    * Specifically `[mcs.nn~ fargan-zeroshot-causal-adversarial-620k.ts packed_step 1 256]` for the recent model.
+4. Connect everything to `[ezdac]`
