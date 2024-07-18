@@ -1,1 +1,1 @@
-# Numpy PPG Playback object
+# [Deprecated] Numpy PPG Playback object
