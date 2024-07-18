@@ -20,9 +20,9 @@ if (APPLE)
     endif()
 endif()
 
-if (NOT DEFINED C74_LIBRARY_OUTPUT_DIRECTORY) {
+if (NOT DEFINED C74_LIBRARY_OUTPUT_DIRECTORY) 
     set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../Library")
-}
+endif()
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/../max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
 
