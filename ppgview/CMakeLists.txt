@@ -22,7 +22,11 @@ endif()
 
 
 if (NOT DEFINED C74_LIBRARY_OUTPUT_DIRECTORY)
-    set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../Library")
+    if(APPLE)
+        set(C74_LIBRARY_OUTPUT_DIRECTORY "~/Documents/Max 8/Library")
+    elseif(MSVC)
+        set(C74_LIBRARY_OUTPUT_DIRECTORY "C:/ProgramData/Documents//Max 8/Library")
+    endif()
 endif()
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/../max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
