@@ -10,13 +10,14 @@ We use the Python `promonet` package to extract speech features and export the n
 
 ```bash
 python -m promonet.data.pack \
-    --config config/fargan-zeroshot-shuffle.py \
+    --config config/fargan-zeroshot-shuffle-warmup50-weight1en1-fdisc.py \
     --audio_file test.wav \
     --output_file test.csv \
+    --checkpoint fargan-zeroshot-causal-adversarial-620k.pt \
     --gpu 0
 ```
 
-ProMoNet configuration files, such as `fargan-zeroshot-shuffle.py`, can be found [here](https://github.com/maxrmorrison/promonet/tree/master/config).
+ProMoNet configuration files, such as `fargan-zeroshot-shuffle-warmup50-weight1en1-fdisc.py`, can be found [here](https://github.com/maxrmorrison/promonet/tree/master/config).
 
 
 ### Exporting the neural vocoder
@@ -25,9 +26,9 @@ The vocoder neural network converts speech features into a speech waveform. You 
 
 ```bash
 python -m promonet.model.export \
-    --config config/fargan-zeroshot-shuffle.py \
-    --checkpoint runs/fargan-zeroshot-shuffle/generator-00240000.pt \
-    --output_file fargan-zeroshot-240k.ts
+    --config config/fargan-zeroshot-shuffle-warmup50-weight1en1-fdisc.py \
+    --checkpoint fargan-zeroshot-causal-adversarial-620k.pt \
+    --output_file fargan-zeroshot-causal-adversarial-620k.ts
 ```
 
 The model checkpoint is created during `promonet` training, which is documented [here](https://github.com/maxrmorrison/promonet/tree/master?tab=readme-ov-file#training).
