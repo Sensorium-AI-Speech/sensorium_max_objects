@@ -25,7 +25,7 @@ if (NOT DEFINED C74_LIBRARY_OUTPUT_DIRECTORY)
     if(APPLE)
         set(C74_LIBRARY_OUTPUT_DIRECTORY "~/Documents/Max 8/Library")
     elseif(MSVC)
-        set(C74_LIBRARY_OUTPUT_DIRECTORY "C:/ProgramData/Documents//Max 8/Library")
+        set(C74_LIBRARY_OUTPUT_DIRECTORY "C:/ProgramData/Documents/Max 8/Library")
     endif()
 endif()
 

@@ -6,17 +6,19 @@
     - [Extracting speech features](#extracting-speech-features)
     - [Exporting the neural vocoder](#exporting-the-neural-vocoder)
   - [MaxMSP instructions](#maxmsp-instructions)
+    - [Building Externals](#building-externals)
     - [How to put everything together](#how-to-put-everything-together)
 
 ## Getting Started
 1. Clone this repo to local
-2. Add `<path-to-repo>/patches` to Max include path (`open Max -> Options/File Preferences`)
-3. Follow directions to get IRCAM's `nn~` working for your OS: [nn_tilde](https://github.com/acids-ircam/nn_tilde).
+2. Follow [Building Externals](#building-externals) to build externals written with `max-sdk`
+3. Add `<path-to-repo>/patches` to Max include path (`open Max -> Options/File Preferences`)
+4. Follow directions to get IRCAM's `nn~` working for your OS: [nn_tilde](https://github.com/acids-ircam/nn_tilde).
     * Might also want to follow their instructions on loading pretrained models and create a folder called `pretrained_models`, and adding it to the Max include path (`Options/File Preferences`)
-4. Download promonet *.ts and *.pt file.
-5. Follow [promonet instructions](#promonet-instructions) to extract speech features from an audio file
+5. Download promonet *.ts and *.pt file.
+6. Follow [promonet instructions](#promonet-instructions) to extract speech features from an audio file
     * There are test *.wav files in `test_files/audio`
-6. Either follow the instructions on [how to get started in MaxMSP](#maxmsp-instructions), or open `test_promoread_promo2signal_071524.maxpat` as a template patcher.
+7. Either follow the instructions on [how to get started in MaxMSP](#maxmsp-instructions), or open `test_promoread_promo2signal_071524.maxpat` as a template patcher.
     * There are test *.csv files in `test_files/csv`
 
 ## ProMoNet instructions
@@ -52,6 +54,15 @@ python -m promonet.model.export \
 The model checkpoint is created during `promonet` training, which is documented [here](https://github.com/maxrmorrison/promonet/tree/master?tab=readme-ov-file#training).
 
 ## MaxMSP instructions
+
+### Building Externals
+1. Run `git submodule update --init --recursive` to get max-sdk for the externals.
+2. cd into an external folder (i.e. `ppgview/`)
+3. run `mkdir build && cd build`
+4. run `cmake .. -DC74_LIBRARY_OUTPUT_DIRECTORY=/path/to/Max/file/include`
+5. run `cmake --build . --config Release`
+
+The external should then be usable within MaxMSP
 
 ### How to put everything together
 To start real-time inference of turning speech features to speech sound with the neural vocoder using IRCAM's mcs.nn~ Max object you do the following:
