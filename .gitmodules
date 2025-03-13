@@ -1,7 +1,0 @@
-[submodule "np.ppgplay/bfnppc"]
-	path = np.ppgplay/bfnppc
-	url = https://github.com/dependanz/bfnppc
-
-[submodule "max-sdk"]
-	path = max-sdk
-	url = https://github.com/Cycling74/max-sdk
