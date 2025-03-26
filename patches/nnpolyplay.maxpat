@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1682.0, 268.0, 672.0, 559.0 ],
+		"rect" : [ -905.0, 262.0, 672.0, 559.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 18.0,
@@ -40,6 +40,22 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 403.0, 34.745761096477509, 38.0, 29.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -68,13 +84,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 29.0, 184.0, 543.0, 50.0 ],
-					"text" : "mcs.nn~ fargan-zeroshot-causal-weighted-incpitch-singing-100k.ts packed_step 1 256"
+					"patching_rect" : [ 29.0, 184.0, 346.0, 29.0 ],
+					"text" : "mcs.nn~ test_model.ts packed_step 1 256"
 				}
 
 			}
@@ -82,10 +97,10 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 29.0, 99.0, 117.0, 29.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 29.0, 114.0, 117.0, 29.0 ],
 					"text" : "promo2signal"
 				}
 
@@ -108,6 +123,14 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"midpoints" : [ 412.5, 171.0, 38.5, 171.0 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-4", 0 ]
@@ -139,24 +162,6 @@
 		"dependency_cache" : [ 			{
 				"name" : "mcs.nn~.mxe64",
 				"type" : "mx64"
-			}
-, 			{
-				"name" : "ppg.maxpat",
-				"bootpath" : "D:/MaxPatches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "ppg.silent.maxpat",
-				"bootpath" : "D:/MaxPatches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "promo2signal.maxpat",
-				"bootpath" : "D:/MaxPatches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ],
 		"autosave" : 0
